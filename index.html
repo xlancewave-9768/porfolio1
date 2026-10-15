@@ -1,0 +1,1741 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="violet">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prawez Alam | Senior Full-Stack Architect & eCommerce Specialist (7+ Years Exp)</title>
+  <meta name="description"
+    content="Senior Full-Stack Developer & eCommerce Architect with 7+ years of experience delivering custom websites, high-scale marketplaces (Amazon/Flipkart/Meesho style), Shopify Plus, WooCommerce, and ROI-driven Meta Ads.">
+  <meta name="keywords"
+    content="Custom Website Development, WordPress Website, Custom Web Apps, Meta Ads, Shopify Website, WooCommerce, Multi-Vendor Marketplace, Amazon Flipkart Meesho clone, Senior Full Stack Developer, eCommerce Specialist">
+  <meta name="author" content="Prawez Alam">
+
+  <!-- OpenGraph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content=" Prawez Alam | Senior Full-Stack Architect & eCommerce Specialist">
+  <meta property="og:description"
+    content="7+ Years of Engineering Scalable Digital Experiences, Custom SaaS, Multi-Vendor Marketplaces & High-Converting Meta Ads.">
+  <meta property="og:image" content="assets/images/marketplace.jpg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <!-- FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dark-theme">
+  <!-- Interactive Canvas Background -->
+  <canvas id="ambient-canvas"></canvas>
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+  <div class="glow-orb orb-3"></div>
+
+  <!-- Custom Neon Cursor -->
+  <div class="custom-cursor" id="cursor-dot"></div>
+  <div class="cursor-trailer" id="cursor-trailer"></div>
+
+  <!-- Audio Feedback & Theme Bar -->
+  <div class="quick-controls" id="quick-controls">
+    <button class="control-btn" id="sound-toggle" title="Toggle Sound Feedback (Web Audio Synthesizer)"
+      aria-label="Toggle Sound">
+      <i class="fa-solid fa-volume-high"></i>
+      <span class="btn-text">Audio: <b id="sound-status">ON</b></span>
+    </button>
+    <div class="palette-picker" id="palette-picker" title="Switch Theme Accent">
+      <span class="palette-dot violet active" data-color="violet" title="Cyber Violet"></span>
+      <span class="palette-dot cyan" data-color="cyan" title="Electric Cyan"></span>
+      <span class="palette-dot emerald" data-color="emerald" title="Emerald Matrix"></span>
+      <span class="palette-dot amber" data-color="amber" title="Royal Amber"></span>
+    </div>
+    <button class="control-btn cmd-k-btn" id="cmd-k-trigger" title="Open Command Palette (Ctrl+K)">
+      <kbd>⌘K</kbd>
+    </button>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="site-header" id="main-header">
+    <div class="header-inner container">
+      <!-- Logo -->
+      <a href="#home" class="brand-logo nav-trigger" data-page="home">
+        <div class="logo-icon">
+          <span class="logo-symbol">&lt;/&gt;</span>
+        </div>
+        <div class="logo-text">
+          <span class="logo-name">PRAWEZ<span class="highlight">ALAM</span></span>
+          <span class="logo-tag">7+ YRS ARCHITECT</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <div class="nav-pill-indicator" id="nav-pill"></div>
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link active" data-page="home"><i class="fa-solid fa-house"></i> Home</a></li>
+          <li><a href="#about" class="nav-link" data-page="about"><i class="fa-solid fa-user-astronaut"></i> About</a>
+          </li>
+          <li><a href="#projects" class="nav-link" data-page="projects"><i class="fa-solid fa-cubes"></i> Projects</a>
+          </li>
+          <li><a href="#services" class="nav-link" data-page="services"><i class="fa-solid fa-layer-group"></i>
+              Services</a></li>
+          <li><a href="#contact" class="nav-link" data-page="contact"><i class="fa-solid fa-paper-plane"></i>
+              Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Button & Mobile Burger -->
+      <div class="header-actions">
+        <a href="#contact" class="cta-pill-btn nav-trigger" data-page="contact">
+          <span class="pulse-dot"></span>
+          <span>Let's Talk</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Open Mobile Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="drawer-header">
+      <span class="drawer-title">Navigation Menu</span>
+      <button class="drawer-close" id="drawer-close">&times;</button>
+    </div>
+    <ul class="drawer-links">
+      <li><a href="#home" class="drawer-link active" data-page="home"><i class="fa-solid fa-house"></i> Home</a></li>
+      <li><a href="#about" class="drawer-link" data-page="about"><i class="fa-solid fa-user-astronaut"></i> About (7 Yrs
+          Exp)</a></li>
+      <li><a href="#projects" class="drawer-link" data-page="projects"><i class="fa-solid fa-cubes"></i> Projects & Case
+          Studies</a></li>
+      <li><a href="#services" class="drawer-link" data-page="services"><i class="fa-solid fa-layer-group"></i> All 7
+          Services</a></li>
+      <li><a href="#contact" class="drawer-link" data-page="contact"><i class="fa-solid fa-paper-plane"></i> Contact &
+          Estimator</a></li>
+    </ul>
+    <div class="drawer-footer">
+      <div class="drawer-status">
+        <span class="status-indicator"></span> Available for New Contracts
+      </div>
+      <div class="drawer-socials">
+        <a href="https://github.com" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://wa.me/" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main View Container (5 Pages SPA) -->
+  <main id="app-viewport">
+
+    <!-- ========================================== -->
+    <!-- 1. HOME PAGE VIEW                          -->
+    <!-- ========================================== -->
+    <section class="page-view active" id="view-home" data-route="home">
+      <!-- Hero Section -->
+      <div class="hero-section container">
+        <div class="hero-grid">
+
+          <div class="hero-content">
+            <!-- Experience Badge -->
+            <div class="experience-pill" id="hero-exp-badge">
+              <span class="sparkle-icon">✨</span>
+              <span class="exp-text"><strong>7+ Years</strong> of Proven Engineering Excellence</span>
+              <span class="availability-pill"><span class="live-dot"></span> Available Q4</span>
+            </div>
+
+            <!-- Dynamic Headline -->
+            <h1 class="hero-title">
+              Architecting <span class="gradient-text text-glow">High-Scale</span> Web Systems & <span
+                class="typewriter-text" id="typewriter"></span>
+            </h1>
+
+            <p class="hero-subtitle">
+              Senior Full-Stack Engineer and eCommerce Architect with <strong>7 years</strong> of delivering
+              enterprise-grade web applications, Amazon/Flipkart-style multi-vendor marketplaces, high-converting
+              Shopify & WooCommerce stores, and scale-driven Meta Ads funnels.
+            </p>
+
+            <!-- Hero Action Buttons -->
+            <div class="hero-cta-group">
+              <a href="#projects" class="btn btn-primary nav-trigger" data-page="projects">
+                <span>Explore Featured Work</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a href="#services" class="btn btn-glass nav-trigger" data-page="services">
+                <i class="fa-solid fa-calculator"></i>
+                <span>Estimate Project Cost</span>
+              </a>
+              <button class="btn btn-icon-glass" id="open-resume-btn" title="View Full Resume / Credentials">
+                <i class="fa-solid fa-file-invoice"></i>
+                <span>Resume</span>
+              </button>
+            </div>
+
+            <!-- Trust / Key Metrics Bar -->
+            <div class="hero-stats-bar">
+              <div class="stat-card">
+                <div class="stat-number" data-target="7">7<span class="accent-plus">+</span></div>
+                <div class="stat-label">Years Experience</div>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-card">
+                <div class="stat-number" data-target="180">180<span class="accent-plus">+</span></div>
+                <div class="stat-label">Projects Launched</div>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-card">
+                <div class="stat-number" data-target="15">$15<span class="accent-plus">M+</span></div>
+                <div class="stat-label">Client eCommerce GMV</div>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-card">
+                <div class="stat-number" data-target="4.8">4.8<span class="accent-plus">x</span></div>
+                <div class="stat-label">Avg Meta Ads ROAS</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Visual & Interactive 3D Card -->
+          <div class="hero-visual">
+            <div class="visual-card-wrap">
+              <div class="glass-terminal tilt-element" id="hero-tilt-card">
+                <div class="terminal-header">
+                  <div class="terminal-dots">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                  </div>
+                  <span class="terminal-title">architect@core: ~/portfolio-v7</span>
+                  <span class="terminal-badge"><i class="fa-solid fa-shield-check"></i> Enterprise</span>
+                </div>
+
+                <div class="terminal-body">
+                  <div class="code-line"><span class="c-keyword">const</span> <span class="c-var">architect</span> = {
+                  </div>
+                  <div class="code-line indent-1"><span class="c-prop">name</span>: <span class="c-str">'Prawez
+                      Alam'</span>,</div>
+                  <div class="code-line indent-1"><span class="c-prop">seniority</span>: <span class="c-str">'7+ Years
+                      Production Experience'</span>,</div>
+                  <div class="code-line indent-1"><span class="c-prop">specializations</span>: [</div>
+                  <div class="code-line indent-2"><span class="c-str">'Custom Web Applications'</span>,</div>
+                  <div class="code-line indent-2"><span class="c-str">'Amazon/Flipkart Multi-Vendor Systems'</span>,
+                  </div>
+                  <div class="code-line indent-2"><span class="c-str">'Headless Shopify & WooCommerce'</span>,</div>
+                  <div class="code-line indent-2"><span class="c-str">'Meta Ads Funnel Optimization (ROAS 4.8x)'</span>
+                  </div>
+                  <div class="code-line indent-1">],</div>
+                  <div class="code-line indent-1"><span class="c-prop">performanceScore</span>: <span
+                      class="c-num">99.8</span>,</div>
+                  <div class="code-line indent-1"><span class="c-prop">status</span>: <span class="c-str">'Ready to
+                      build your next breakthrough'</span></div>
+                  <div class="code-line">};</div>
+                  <div class="code-line line-highlight">
+                    <span class="c-fn">architect</span>.<span class="c-method">deploySuccess</span>(<span
+                      class="c-str">'your_vision'</span>);
+                  </div>
+                </div>
+
+                <!-- Floating Hologram Pills -->
+                <div class="floating-holo holo-1">
+                  <div class="holo-icon"><i class="fa-brands fa-shopify"></i></div>
+                  <div class="holo-info">
+                    <span class="holo-title">Shopify Plus Partner</span>
+                    <span class="holo-sub">Liquid & Headless</span>
+                  </div>
+                </div>
+
+                <div class="floating-holo holo-2">
+                  <div class="holo-icon"><i class="fa-solid fa-chart-line-up"></i></div>
+                  <div class="holo-info">
+                    <span class="holo-title">Meta Ads Specialist</span>
+                    <span class="holo-sub">$3.2M+ Ad Spend Managed</span>
+                  </div>
+                </div>
+
+                <div class="floating-holo holo-3">
+                  <div class="holo-icon"><i class="fa-solid fa-cart-shopping-fast"></i></div>
+                  <div class="holo-info">
+                    <span class="holo-title">Marketplace Architect</span>
+                    <span class="holo-sub">Amazon & Meesho Model</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Tech Stack Infinite Marquee -->
+      <div class="tech-marquee-wrapper">
+        <div class="marquee-track">
+          <div class="marquee-item"><i class="fa-brands fa-react"></i> React.js</div>
+          <div class="marquee-item"><i class="fa-brands fa-node-js"></i> Node.js</div>
+          <div class="marquee-item"><i class="fa-brands fa-shopify"></i> Shopify Plus</div>
+          <div class="marquee-item"><i class="fa-brands fa-wordpress"></i> WordPress & WooCommerce</div>
+          <div class="marquee-item"><i class="fa-brands fa-meta"></i> Meta Ads Manager & CAPI</div>
+          <div class="marquee-item"><i class="fa-brands fa-aws"></i> AWS Cloud & Docker</div>
+          <div class="marquee-item"><i class="fa-solid fa-database"></i> PostgreSQL & MongoDB</div>
+          <div class="marquee-item"><i class="fa-brands fa-js"></i> TypeScript & Next.js</div>
+          <div class="marquee-item"><i class="fa-brands fa-stripe"></i> Stripe & Razorpay Payments</div>
+          <div class="marquee-item"><i class="fa-solid fa-network-wired"></i> GraphQL & REST APIs</div>
+          <!-- Repeat for smooth loop -->
+          <div class="marquee-item"><i class="fa-brands fa-react"></i> React.js</div>
+          <div class="marquee-item"><i class="fa-brands fa-node-js"></i> Node.js</div>
+          <div class="marquee-item"><i class="fa-brands fa-shopify"></i> Shopify Plus</div>
+          <div class="marquee-item"><i class="fa-brands fa-wordpress"></i> WordPress & WooCommerce</div>
+          <div class="marquee-item"><i class="fa-brands fa-meta"></i> Meta Ads Manager & CAPI</div>
+          <div class="marquee-item"><i class="fa-brands fa-aws"></i> AWS Cloud & Docker</div>
+        </div>
+      </div>
+
+      <!-- Featured Services Teaser Grid -->
+      <section class="section-container container">
+        <div class="section-header text-center">
+          <div class="badge-tag">WHAT I BUILD</div>
+          <h2 class="section-title">Specialized Services Engineered for Scale</h2>
+          <p class="section-desc">From high-velocity startups to multi-million dollar eCommerce brands, here are the
+            flagship solutions I build with 7 years of hands-on expertise.</p>
+        </div>
+
+        <div class="featured-services-grid">
+
+          <div class="service-card glass-card tilt-element">
+            <div class="card-glow"></div>
+            <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+            <div class="service-badge">Full-Stack</div>
+            <h3 class="service-title">Custom Website Development</h3>
+            <p class="service-text">Custom, high-performance web applications built from scratch with zero bloat,
+              sub-second loading speeds, and robust architectural design.</p>
+            <ul class="service-highlights">
+              <li><i class="fa-solid fa-check"></i> React, Next.js, Node & TypeScript</li>
+              <li><i class="fa-solid fa-check"></i> Sub-second Core Web Vitals</li>
+              <li><i class="fa-solid fa-check"></i> Responsive & Mobile-First</li>
+            </ul>
+            <a href="#services" class="card-link nav-trigger" data-page="services">Learn More <i
+                class="fa-solid fa-chevron-right"></i></a>
+          </div>
+
+          <div class="service-card glass-card tilt-element">
+            <div class="card-glow"></div>
+            <div class="service-icon"><i class="fa-solid fa-sitemap"></i></div>
+            <div class="service-badge">Marketplaces</div>
+            <h3 class="service-title">Amazon / Flipkart Style Solutions</h3>
+            <p class="service-text">Multi-vendor marketplace ecosystems like Amazon, Flipkart and Meesho featuring
+              merchant portals, automated split payouts, and social sharing commerce.</p>
+            <ul class="service-highlights">
+              <li><i class="fa-solid fa-check"></i> Multi-vendor Onboarding & Portals</li>
+              <li><i class="fa-solid fa-check"></i> Meesho Reseller & Social Commerce</li>
+              <li><i class="fa-solid fa-check"></i> Real-time Order & Logistics Tracking</li>
+            </ul>
+            <a href="#services" class="card-link nav-trigger" data-page="services">Learn More <i
+                class="fa-solid fa-chevron-right"></i></a>
+          </div>
+
+          <div class="service-card glass-card tilt-element">
+            <div class="card-glow"></div>
+            <div class="service-icon"><i class="fa-brands fa-shopify"></i></div>
+            <div class="service-badge">Shopify Plus</div>
+            <h3 class="service-title">Shopify & WooCommerce Stores</h3>
+            <p class="service-text">High-converting online storefronts optimized for maximum average order value (AOV),
+              frictionless checkout, and international scale.</p>
+            <ul class="service-highlights">
+              <li><i class="fa-solid fa-check"></i> Custom Liquid & Headless Storefronts</li>
+              <li><i class="fa-solid fa-check"></i> 1-Click Upsells & Cart Slide-outs</li>
+              <li><i class="fa-solid fa-check"></i> WooCommerce High-Volume Scaling</li>
+            </ul>
+            <a href="#services" class="card-link nav-trigger" data-page="services">Learn More <i
+                class="fa-solid fa-chevron-right"></i></a>
+          </div>
+
+          <div class="service-card glass-card tilt-element">
+            <div class="card-glow"></div>
+            <div class="service-icon"><i class="fa-brands fa-meta"></i></div>
+            <div class="service-badge">Growth & Ads</div>
+            <h3 class="service-title">Meta Ads (FB & Instagram)</h3>
+            <p class="service-text">Data-driven performance marketing campaigns with server-side CAPI tracking, creative
+              testing frameworks, and proven ROAS exceeding 4x.</p>
+            <ul class="service-highlights">
+              <li><i class="fa-solid fa-check"></i> Full-Funnel Retargeting & Lookalikes</li>
+              <li><i class="fa-solid fa-check"></i> Server-Side CAPI & Offline Event Sync</li>
+              <li><i class="fa-solid fa-check"></i> Conversion Rate Optimization (CRO)</li>
+            </ul>
+            <a href="#services" class="card-link nav-trigger" data-page="services">Learn More <i
+                class="fa-solid fa-chevron-right"></i></a>
+          </div>
+
+        </div>
+
+        <div class="view-all-center">
+          <a href="#services" class="btn btn-secondary nav-trigger" data-page="services">
+            <span>Explore All 7 Services & Cost Estimator</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </section>
+
+      <!-- Client Testimonials & Social Proof -->
+      <section class="section-container container testimonials-section">
+        <div class="section-header text-center">
+          <div class="badge-tag">CLIENT FEEDBACK</div>
+          <h2 class="section-title">Endorsed by Founders & Brand Leaders</h2>
+          <p class="section-desc">Over 7 years of working with international businesses, direct-to-consumer brands, and
+            tech enterprises.</p>
+        </div>
+
+        <div class="testimonials-grid">
+
+          <div class="testimonial-card glass-card">
+            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p class="quote">"Prawez architected our entire multi-vendor marketplace similar to Flipkart and Meesho. The
+              vendor portal, inventory management, and automated checkout were flawless. Our platform processed over
+              $3.8M in its first 6 months with zero downtime."</p>
+            <div class="client-meta">
+              <div class="client-avatar">RV</div>
+              <div class="client-info">
+                <h4>Rahul Verma</h4>
+                <span>Co-Founder & CEO, OmniMart India</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card glass-card">
+            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p class="quote">"We hired Prawez to rebuild our custom Shopify Plus luxury store and manage our Meta Ads
+              campaigns. Our store conversion rate went from 1.6% to 4.2%, and our ROAS averaged 5.2x consistently. 7
+              years of real experience clearly shines through!"</p>
+            <div class="client-meta">
+              <div class="client-avatar">EL</div>
+              <div class="client-info">
+                <h4>Elena Laurent</h4>
+                <span>CMO, Aetherium Luxe Apparel</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card glass-card">
+            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p class="quote">"Finding an engineer who deeply understands custom full-stack development, WordPress
+              architecture, and high-converting paid traffic is rare. Prawez solved bugs our previous agency struggled
+              with for months."</p>
+            <div class="client-meta">
+              <div class="client-avatar">DK</div>
+              <div class="client-info">
+                <h4>David Kovacs</h4>
+                <span>VP of Product, NexusAI Labs</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Home Quick CTA Banner -->
+      <div class="cta-banner-wrapper container">
+        <div class="cta-banner glass-card">
+          <div class="cta-banner-content">
+            <span class="badge-tag">READY TO BUILD?</span>
+            <h2>Have a Vision in Mind? Let’s Make It Reality.</h2>
+            <p>Whether you need a custom web application, an Amazon-level marketplace, or scaling Meta Ads, get a free
+              project blueprint and timeline estimate.</p>
+          </div>
+          <div class="cta-banner-actions">
+            <a href="#contact" class="btn btn-primary nav-trigger" data-page="contact">
+              <span>Schedule Strategy Call</span>
+              <i class="fa-solid fa-calendar-check"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 2. ABOUT PAGE VIEW                         -->
+    <!-- ========================================== -->
+    <section class="page-view" id="view-about" data-route="about">
+      <div class="about-hero container">
+        <div class="section-header text-center">
+          <div class="badge-tag">ABOUT ME</div>
+          <h1 class="section-title">7 Years of Engineering Scalable Digital Systems</h1>
+          <p class="section-desc">Bridging the critical gap between complex code architecture, high-converting eCommerce
+            funnels, and measurable business revenue.</p>
+        </div>
+
+        <!-- Personal Story & Visual -->
+        <div class="about-bio-grid">
+          <div class="about-visual-column">
+            <div class="avatar-card glass-card">
+              <div class="avatar-wrapper">
+                <img src="assets/images/avatar.jpeg" alt="Prawez Alam - Full Stack Architect" class="profile-img">
+                <div class="avatar-badge">
+                  <span class="badge-year">7+</span>
+                  <span class="badge-label">Years Exp</span>
+                </div>
+              </div>
+              <div class="avatar-details">
+                <h3>Prawez Alam</h3>
+                <p class="role-title">Principal Full-Stack & eCommerce Architect</p>
+                <div class="social-links-row">
+                  <a href="https://github.com" target="_blank" class="social-icon" title="GitHub"><i
+                      class="fa-brands fa-github"></i></a>
+                  <a href="https://linkedin.com" target="_blank" class="social-icon" title="LinkedIn"><i
+                      class="fa-brands fa-linkedin"></i></a>
+                  <a href="https://wa.me/" target="_blank" class="social-icon" title="WhatsApp"><i
+                      class="fa-brands fa-whatsapp"></i></a>
+                  <a href="mailto:contact@prawezalam.dev" class="social-icon" title="Email"><i
+                      class="fa-solid fa-envelope"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Facts Card -->
+            <div class="quick-facts-card glass-card">
+              <h4>Quick Fast Facts</h4>
+              <ul class="facts-list">
+                <li><i class="fa-solid fa-globe"></i> <span>Global Reach: Clients in 14+ Countries</span></li>
+                <li><i class="fa-solid fa-award"></i> <span>7 Years Continuous Industry Track Record</span></li>
+                <li><i class="fa-solid fa-clock"></i> <span>Timezone Flexible (US, EU & APAC overlap)</span></li>
+                <li><i class="fa-solid fa-shield-halved"></i> <span>Clean Code, NDA Compliant & Transparent</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="about-content-column">
+            <div class="bio-narrative glass-card">
+              <h3>The Journey Behind the Experience</h3>
+              <p>
+                My journey began 7 years ago when web development was transitioning from static template setups to
+                reactive, headless, and distributed platforms. Over nearly a decade, I didn’t just write code—I analyzed
+                consumer psychology, checkout funnels, database query bottlenecks, and high-budget advertising dynamics.
+              </p>
+              <p>
+                Throughout these 7 years, I’ve had the privilege of architecting <strong>multi-vendor marketplaces
+                  handling 100,000+ SKUs</strong>, scaling <strong>Shopify Plus storefronts to 7-figure annual
+                  revenues</strong>, creating bespoke web applications with custom APIs, and managing <strong>Meta Ads
+                  campaigns</strong> that generated millions in attributed revenue.
+              </p>
+              <p>
+                I don’t believe in one-size-fits-all solutions. Whether building an eCommerce platform mirroring Amazon
+                and Meesho or building a bespoke SaaS engine, every line of code is structured for <strong>speed,
+                  security, conversion, and modular growth</strong>.
+              </p>
+            </div>
+
+            <!-- Core Principles Matrix -->
+            <div class="principles-grid">
+              <div class="principle-item glass-card">
+                <div class="p-icon"><i class="fa-solid fa-bolt"></i></div>
+                <h4>Zero-Lag Performance</h4>
+                <p>Every millisecond saved correlates with a 7% boost in checkout conversions. Fast load is
+                  non-negotiable.</p>
+              </div>
+              <div class="principle-item glass-card">
+                <div class="p-icon"><i class="fa-solid fa-chart-pie"></i></div>
+                <h4>Conversion-Driven Architecture</h4>
+                <p>Design and technical structure specifically built around user intent, retention, and maximum average
+                  order value.</p>
+              </div>
+              <div class="principle-item glass-card">
+                <div class="p-icon"><i class="fa-solid fa-cubes-stacked"></i></div>
+                <h4>Scalable & Maintainable</h4>
+                <p>Modular codebases, clean documentation, robust security, and cloud scalability that grows with your
+                  business.</p>
+              </div>
+              <div class="principle-item glass-card">
+                <div class="p-icon"><i class="fa-solid fa-handshake-angle"></i></div>
+                <h4>Transparent Partnership</h4>
+                <p>Milestone-based delivery, proactive communication, and post-launch maintenance to guarantee success.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7-Year Chronological Career Timeline -->
+        <div class="timeline-section">
+          <div class="section-header text-center">
+            <div class="badge-tag">CAREER EVOLUTION</div>
+            <h2 class="section-title">7-Year Chronological Milestones</h2>
+            <p class="section-desc">From core development to multi-million dollar eCommerce architectures and growth
+              engineering.</p>
+          </div>
+
+          <div class="timeline-tree">
+
+            <div class="timeline-item left">
+              <div class="timeline-content glass-card">
+                <div class="timeline-year">2019 - 2020</div>
+                <h3>The Foundations: Full-Stack & Core Web</h3>
+                <p>Deep-dived into modern JavaScript, semantic HTML5/CSS3 architecture, PHP, Node.js, and relational
+                  database systems. Developed 30+ custom corporate websites with custom CMS configurations.</p>
+                <div class="timeline-tags">
+                  <span>JavaScript</span><span>Node.js</span><span>PHP</span><span>MySQL</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item right">
+              <div class="timeline-content glass-card">
+                <div class="timeline-year">2021 - 2022</div>
+                <h3>WordPress & WooCommerce Scalability Mastery</h3>
+                <p>Specialized in advanced WooCommerce architectures, custom theme and plugin engineering, database
+                  indexing, and headless WordPress setups capable of processing thousands of concurrent transactions.
+                </p>
+                <div class="timeline-tags">
+                  <span>WooCommerce</span><span>Custom Plugins</span><span>REST APIs</span><span>PageSpeed 99</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item left">
+              <div class="timeline-content glass-card">
+                <div class="timeline-year">2023 - 2024</div>
+                <h3>Shopify Plus & Enterprise Multi-Vendor Solutions</h3>
+                <p>Engineered comprehensive multi-vendor marketplace platforms inspired by Amazon and Flipkart,
+                  featuring seller dashboards, dynamic commission splitting, and integrated Meesho-like social reseller
+                  funnels.</p>
+                <div class="timeline-tags">
+                  <span>Shopify Plus</span><span>Liquid</span><span>Marketplace Engines</span><span>Split
+                    Payments</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item right">
+              <div class="timeline-content glass-card">
+                <div class="timeline-year">2024 - 2026</div>
+                <h3>Growth Engineering, Meta Ads & AI Web Apps</h3>
+                <p>Combined high-performance engineering with direct-response growth marketing: built automated Meta Ads
+                  CAPI pipelines, predictive inventory algorithms, and modern cloud-native SaaS web apps.</p>
+                <div class="timeline-tags">
+                  <span>Meta Ads CAPI</span><span>ROAS Optimization</span><span>Next.js</span><span>Cloud
+                    Microservices</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Technical Proficiency Radar -->
+        <div class="skills-showcase-section">
+          <div class="section-header text-center">
+            <div class="badge-tag">PROFICIENCY MATRIX</div>
+            <h2 class="section-title">Verified Technical Skills</h2>
+            <p class="section-desc">Proficiency ratings calibrated over 7 years of real production deliveries.</p>
+          </div>
+
+          <div class="skills-grid">
+            <div class="skill-category glass-card">
+              <h3><i class="fa-brands fa-react"></i> Frontend & Web Apps</h3>
+              <div class="skill-bar-item">
+                <div class="skill-info"><span>React.js / Next.js</span><span>98%</span></div>
+                <div class="progress-track">
+                  <div class="progress-fill" style="width: 98%;"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-info"><span>Vanilla JavaScript / ES6+ / TypeScript</span><span>96%</span></div>
+                <div class="progress-track">
+                  <div class="progress-fill" style="width: 96%;"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-info"><span>Responsive CSS / Animations / WebGL</span><span>95%</span></div>
+                <div class="progress-track">
+                  <div class="progress-fill" style="width: 95%;"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-category glass-card">
+              <h3><i class="fa-solid fa-cart-shopping"></i> eCommerce & Marketplaces</h3>
+              <div class="skill-bar-item">
+                <div class="skill-info"><span>Multi-Vendor Marketplaces (Amazon/Flipkart Model)</span><span>95%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill" style="width: 95%;"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-info"><span>Shopify Plus & Liquid Customization</span><span>97%</span></div>
+                <div class="progress-track">
+                  <div class="progress-fill" style="width: 97%;"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-info"><span>WooCommerce & Custom Gateways</span><span>96%</span></div>
+                <div class="progress-track">
+                  <div class="progress-fill" style="width: 96%;"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-category glass-card">
+              <h3><i class="fa-solid fa-server"></i> Backend & Cloud Architecture</h3>
+              <div class="skill-bar-item">
+                <div class="skill-info"><span>Node.js / Express / APIs</span><span>94%</span></div>
+                <div class="progress-track">
+                  <div class="progress-fill" style="width: 94%;"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-info"><span>PostgreSQL / MongoDB / Redis Caching</span><span>92%</span></div>
+                <div class="progress-track">
+                  <div class="progress-fill" style="width: 92%;"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-info"><span>AWS Cloud, Docker, CI/CD</span><span>88%</span></div>
+                <div class="progress-track">
+                  <div class="progress-fill" style="width: 88%;"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-category glass-card">
+              <h3><i class="fa-brands fa-meta"></i> Meta Ads & Growth Marketing</h3>
+              <div class="skill-bar-item">
+                <div class="skill-info"><span>Meta Ads Strategy & Scaling</span><span>93%</span></div>
+                <div class="progress-track">
+                  <div class="progress-fill" style="width: 93%;"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-info"><span>Server-Side Conversions API (CAPI)</span><span>96%</span></div>
+                <div class="progress-track">
+                  <div class="progress-fill" style="width: 96%;"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-info"><span>A/B Creative Testing & Funnel CRO</span><span>91%</span></div>
+                <div class="progress-track">
+                  <div class="progress-fill" style="width: 91%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 3. PROJECTS PAGE VIEW                      -->
+    <!-- ========================================== -->
+    <section class="page-view" id="view-projects" data-route="projects">
+      <div class="projects-hero container">
+        <div class="section-header text-center">
+          <div class="badge-tag">PORTFOLIO SHOWCASE</div>
+          <h1 class="section-title">Featured Projects & Proven Case Studies</h1>
+          <p class="section-desc">Explore live platforms, high-volume eCommerce setups, marketplace solutions, and
+            high-yield ad campaigns built over 7 years.</p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">All Work (6)</button>
+          <button class="filter-btn" data-filter="marketplace">Marketplaces (Amazon/Meesho)</button>
+          <button class="filter-btn" data-filter="ecommerce">Shopify & WooCommerce</button>
+          <button class="filter-btn" data-filter="custom">Custom Web & SaaS</button>
+          <button class="filter-btn" data-filter="meta-ads">Meta Ads Growth</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+
+          <!-- Project 1: Multi-Vendor Marketplace -->
+          <div class="project-card glass-card" data-category="marketplace">
+            <div class="project-media">
+              <img src="assets/images/marketplace.jpg" alt="OmniMart Multi-Vendor Marketplace" class="project-img">
+              <div class="project-overlay">
+                <button class="btn btn-primary project-modal-trigger" data-project="project-1">
+                  <span>View Case Study</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </button>
+              </div>
+              <span class="project-badge">Amazon / Flipkart Architecture</span>
+            </div>
+            <div class="project-content">
+              <div class="project-meta-row">
+                <span class="project-client">OmniMart Global</span>
+                <span class="project-metric"><i class="fa-solid fa-chart-line"></i> $48.1M GMV</span>
+              </div>
+              <h3 class="project-title">Enterprise Multi-Vendor eCommerce Platform</h3>
+              <p class="project-excerpt">Complete multi-vendor marketplace modeled after Amazon and Flipkart with
+                Meesho-inspired social reseller mechanics, automated vendor commission payouts, and live order tracking.
+              </p>
+              <div class="project-tags">
+                <span>React.js</span><span>Node.js</span><span>PostgreSQL</span><span>Stripe Connect</span><span>Vendor
+                  Dashboard</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Luxury Shopify Plus Store -->
+          <div class="project-card glass-card" data-category="ecommerce">
+            <div class="project-media">
+              <img src="assets/images/shopify.jpg" alt="Aetherium Luxury Shopify Store" class="project-img">
+              <div class="project-overlay">
+                <button class="btn btn-primary project-modal-trigger" data-project="project-2">
+                  <span>View Case Study</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </button>
+              </div>
+              <span class="project-badge">Shopify Plus Custom Theme</span>
+            </div>
+            <div class="project-content">
+              <div class="project-meta-row">
+                <span class="project-client">Aetherium Luxury</span>
+                <span class="project-metric"><i class="fa-solid fa-arrow-trend-up"></i> +240% Conv. Rate</span>
+              </div>
+              <h3 class="project-title">Bespoke Shopify Plus Apparel & Tech Storefront</h3>
+              <p class="project-excerpt">Ultra-premium headless eCommerce experience with dynamic cart drawer upsells,
+                custom Liquid sections, instantaneous product filtering, and multi-currency checkout.</p>
+              <div class="project-tags">
+                <span>Shopify 2.0</span><span>Liquid</span><span>Tailored Cart</span><span>Klaviyo Integration</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: Meta Ads Campaign Scaling -->
+          <div class="project-card glass-card" data-category="meta-ads">
+            <div class="project-media">
+              <img src="assets/images/meta-ads.jpg" alt="Meta Ads Performance Funnel" class="project-img">
+              <div class="project-overlay">
+                <button class="btn btn-primary project-modal-trigger" data-project="project-3">
+                  <span>View Case Study</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </button>
+              </div>
+              <span class="project-badge">Meta Ads & CAPI</span>
+            </div>
+            <div class="project-content">
+              <div class="project-meta-row">
+                <span class="project-client">Apex Direct Brands</span>
+                <span class="project-metric"><i class="fa-solid fa-fire"></i> 5.8x Avg ROAS</span>
+              </div>
+              <h3 class="project-title">High-ROAS Meta Ads & Conversion Optimization</h3>
+              <p class="project-excerpt">Data-driven Facebook and Instagram ad campaign scaling from $20k to $145k
+                monthly spend with server-side CAPI event deduplication and high-intent creative testing frameworks.</p>
+              <div class="project-tags">
+                <span>Meta Ads Manager</span><span>Conversions API</span><span>Pixel Setup</span><span>Creative
+                  Matrix</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: Custom SaaS Platform -->
+          <div class="project-card glass-card" data-category="custom">
+            <div class="project-media">
+              <img src="assets/images/saas-dashboard.jpg" alt="Nexus AI Cloud SaaS Dashboard" class="project-img">
+              <div class="project-overlay">
+                <button class="btn btn-primary project-modal-trigger" data-project="project-4">
+                  <span>View Case Study</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </button>
+              </div>
+              <span class="project-badge">Custom Web Application</span>
+            </div>
+            <div class="project-content">
+              <div class="project-meta-row">
+                <span class="project-client">Nexus AI Platform</span>
+                <span class="project-metric"><i class="fa-solid fa-bolt"></i> 99.99% Uptime</span>
+              </div>
+              <h3 class="project-title">Next-Gen Cloud Orchestration & AI Dashboard</h3>
+              <p class="project-excerpt">Custom web application engineered for real-time telemetry, server health
+                tracking, integrated in-browser code editor, and token-based subscription management.</p>
+              <div class="project-tags">
+                <span>Next.js</span><span>WebSockets</span><span>TypeScript</span><span>Tailored API</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5: High-Speed WooCommerce Store -->
+          <div class="project-card glass-card" data-category="ecommerce">
+            <div class="project-media">
+              <div class="project-visual-mockup woo-mockup">
+                <div class="mockup-content">
+                  <i class="fa-brands fa-wordpress-simple"></i>
+                  <span>WooCommerce Ultra-Engine</span>
+                  <div class="speed-badge"><i class="fa-solid fa-gauge-high"></i> 99 Google PageSpeed</div>
+                </div>
+              </div>
+              <div class="project-overlay">
+                <button class="btn btn-primary project-modal-trigger" data-project="project-5">
+                  <span>View Case Study</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </button>
+              </div>
+              <span class="project-badge">WordPress & WooCommerce</span>
+            </div>
+            <div class="project-content">
+              <div class="project-meta-row">
+                <span class="project-client">Verdant Organics</span>
+                <span class="project-metric"><i class="fa-solid fa-stopwatch"></i> 0.7s Load Time</span>
+              </div>
+              <h3 class="project-title">High-Volume WooCommerce Platform & Subscriptions</h3>
+              <p class="project-excerpt">Custom WordPress & WooCommerce installation optimized for 40,000 monthly orders
+                with recurring subscription billing, customized checkout fields, and instant search.</p>
+              <div class="project-tags">
+                <span>WordPress</span><span>WooCommerce</span><span>Custom Gateway</span><span>Redis Cache</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6: Meesho-Style Social Commerce Platform -->
+          <div class="project-card glass-card" data-category="marketplace">
+            <div class="project-media">
+              <div class="project-visual-mockup social-mockup">
+                <div class="mockup-content">
+                  <i class="fa-solid fa-share-nodes"></i>
+                  <span>Social Reseller Engine</span>
+                  <div class="speed-badge"><i class="fa-solid fa-users"></i> 85K Active Resellers</div>
+                </div>
+              </div>
+              <div class="project-overlay">
+                <button class="btn btn-primary project-modal-trigger" data-project="project-6">
+                  <span>View Case Study</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </button>
+              </div>
+              <span class="project-badge">Meesho-Style Reselling</span>
+            </div>
+            <div class="project-content">
+              <div class="project-meta-row">
+                <span class="project-client">BazaarGo Social</span>
+                <span class="project-metric"><i class="fa-solid fa-wallet"></i> Instant Profit Margins</span>
+              </div>
+              <h3 class="project-title">Zero-Investment Social Reseller Commerce Network</h3>
+              <p class="project-excerpt">eCommerce platform allowing independent entrepreneurs to share product catalogs
+                on WhatsApp and Instagram with customized pricing margins, COD verification, and direct supplier
+                shipping.</p>
+              <div class="project-tags">
+                <span>Custom Web App</span><span>WhatsApp Bot</span><span>COD Verification</span><span>Cloud
+                  Scale</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 4. SERVICES PAGE VIEW                      -->
+    <!-- ========================================== -->
+    <section class="page-view" id="view-services" data-route="services">
+      <div class="services-hero container">
+        <div class="section-header text-center">
+          <div class="badge-tag">WHAT I DELIVER</div>
+          <h1 class="section-title">Comprehensive 7 Specialized Services</h1>
+          <p class="section-desc">Backed by 7 years of full-stack engineering and multi-million dollar eCommerce
+            scaling. Every service is built to maximize revenue and performance.</p>
+        </div>
+
+        <!-- 7 Services Detailed Grid -->
+        <div class="services-detailed-list">
+
+          <!-- Service 1: Custom Website Development -->
+          <div class="service-detail-item glass-card" id="service-1">
+            <div class="service-header-row">
+              <div class="service-number">01</div>
+              <div class="service-info-col">
+                <span class="service-pill">Core Engineering</span>
+                <h2>Custom Website Development</h2>
+              </div>
+              <div class="service-speed-badge">
+                <i class="fa-solid fa-bolt"></i> 99+ Core Web Vitals
+              </div>
+            </div>
+            <p class="service-description">
+              Hand-crafted, bespoke websites built without bloated page builders or unnecessary dependencies. Engineered
+              using pure modern web standards, micro-interactions, responsive design, and enterprise-grade SEO to give
+              your brand an unfair digital advantage.
+            </p>
+            <div class="service-features-grid">
+              <div class="feat-box"><i class="fa-solid fa-check-circle"></i> Clean, hand-written HTML5, CSS3, & Modern
+                JavaScript</div>
+              <div class="feat-box"><i class="fa-solid fa-check-circle"></i> Single-Page Applications (SPA) &
+                Progressive Web Apps (PWA)</div>
+              <div class="feat-box"><i class="fa-solid fa-check-circle"></i> Complete cross-browser & mobile responsive
+                compatibility</div>
+              <div class="feat-box"><i class="fa-solid fa-check-circle"></i> Technical SEO architecture, schema tags &
+                speed optimization</div>
+            </div>
+            <div class="service-tech-footer">
+              <strong>Tech Stack:</strong>
+              <span>Vanilla ES6+</span><span>React.js</span><span>Next.js</span><span>HTML5
+                Canvas</span><span>Webpack/Vite</span>
+            </div>
+          </div>
+
+          <!-- Service 2: WordPress Website -->
+          <div class="service-detail-item glass-card" id="service-2">
+            <div class="service-header-row">
+              <div class="service-number">02</div>
+              <div class="service-info-col">
+                <span class="service-pill">Content & CMS</span>
+                <h2>WordPress Website Development</h2>
+              </div>
+              <div class="service-speed-badge">
+                <i class="fa-solid fa-shield"></i> Hardened Security
+              </div>
+            </div>
+            <p class="service-description">
+              Custom WordPress theme and plugin development tailored to your exact workflows. Forget sluggish themes
+              with 50 unused plugins—I build ultra-clean, lightweight WordPress solutions that your marketing team can
+              edit effortlessly while maintaining top-tier security and sub-second load times.
+            </p>
+            <div class="service-features-grid">
+              <div class="feat-box"><i class="fa-solid fa-check-circle"></i> 100% Custom theme development from
+                Figma/PSD designs</div>
+              <div class="feat-box"><i class="fa-solid fa-check-circle"></i> Custom post types, taxonomies & ACF Pro
+                dynamic fields</div>
+              <div class="feat-box"><i class="fa-solid fa-check-circle"></i> Advanced database optimization &
+                server-level caching setup</div>
+              <div class="feat-box"><i class="fa-solid fa-check-circle"></i> Headless WordPress integration via REST API
+                & GraphQL</div>
+            </div>
+            <div class="service-tech-footer">
+              <strong>Tech Stack:</strong>
+              <span>WordPress Core</span><span>PHP 8.x</span><span>ACF Pro</span><span>MySQL</span><span>Redis</span>
+            </div>
+          </div>
+
+          <!-- Service 3: Custom Web Application / SaaS -->
+          <div class="service-detail-item glass-card" id="service-3">
+            <div class="service-header-row">
+              <div class="service-number">03</div>
+              <div class="service-info-col">
+                <span class="service-pill">Full-Stack SaaS</span>
+                <h2>Custom Web Application Development</h2>
+              </div>
+              <div class="service-speed-badge">
+                <i class="fa-solid fa-code-branch"></i> Scalable Microservices
+              </div>
+            </div>
+            <p class="service-description">
+              End-to-end full stack web applications, SaaS dashboards, internal company portals, and data engines. Built
+              from database schema modeling to interactive frontend components, with role-based authentication,
+              real-time sync, and third-party API orchestrations.
+            </p>
+            <div class="service-features-grid">
+              <div class="feat-box"><i class="fa-solid fa-check-circle"></i> Robust RESTful & GraphQL backend API
+                architectures</div>
+              <div class="feat-box"><i class="fa-solid fa-check-circle"></i> JWT, OAuth2, and enterprise role-based
+                access control (RBAC)</div>
+              <div class="feat-box"><i class="fa-solid fa-check-circle"></i> Real-time notification engines with
+                WebSockets</div>
+              <div class="feat-box"><i class="fa-solid fa-check-circle"></i> Payment processor subscriptions (Stripe
+                Billing, Razorpay)</div>
+            </div>
+            <div class="service-tech-footer">
+              <strong>Tech Stack:</strong>
+              <span>Node.js</span><span>Express</span><span>TypeScript</span><span>PostgreSQL</span><span>Docker</span><span>AWS</span>
+            </div>
+          </div>
+
+          <!-- Service 4: Meta Ads (Facebook & Instagram) -->
+          <div class="service-detail-item glass-card" id="service-4">
+            <div class="service-header-row">
+              <div class="service-number">04</div>
+              <div class="service-info-col">
+                <span class="service-pill">Growth & Paid Traffic</span>
+                <h2>Meta Ads (Facebook & Instagram Growth)</h2>
+              </div>
+              <div class="service-speed-badge">
+                <i class="fa-solid fa-arrow-trend-up"></i> 4.8x Avg ROAS
+              </div>
+            </div>
+            <p class="service-description">
+              Engineering-backed performance marketing. I combine deep technical tracking (Conversions API, offline
+              event sets, custom pixel events) with psychological creative testing to scale direct-to-consumer and B2B
+              client acquisition with high ROAS and low CPA.
+            </p>
+            <div class="service-features-grid">
+              <div class="feat-box"><i class="fa-solid fa-check-circle"></i> Server-Side Conversions API (CAPI) bypass
+                for iOS14+ tracking</div>
+              <div class="feat-box"><i class="fa-solid fa-check-circle"></i> Full-funnel campaign architecture: Cold
+                Prospecting, MOFU, & Retargeting</div>
+              <div class="feat-box"><i class="fa-solid fa-check-circle"></i> Dynamic Creative Testing (DCT) frameworks &
+                hook iterations</div>
+              <div class="feat-box"><i class="fa-solid fa-check-circle"></i> Landing page conversion rate optimization
+                (CRO) alignment</div>
+            </div>
+            <div class="service-tech-footer">
+              <strong>Tech Stack:</strong>
+              <span>Meta Ads Manager</span><span>Conversions API (CAPI)</span><span>Google Tag
+                Manager</span><span>GA4</span>
+            </div>
+          </div>
+
+          <!-- Service 5: Shopify Website -->
+          <div class="service-detail-item glass-card" id="service-5">
+            <div class="service-header-row">
+              <div class="service-number">05</div>
+              <div class="service-info-col">
+                <span class="service-pill">eCommerce Storefront</span>
+                <h2>Shopify & Shopify Plus Development</h2>
+              </div>
+              <div class="service-speed-badge">
+                <i class="fa-brands fa-shopify"></i> Shopify 2.0 Expert
+              </div>
+            </div>
+            <p class="service-description">
+              Custom Shopify 2.0 theme engineering, app custom development, and checkout optimizations designed to
+              maximize Average Order Value (AOV). Built for DTC brands doing six and seven figures in online revenue.
+            </p>
+            <div class="service-features-grid">
+              <div class="feat-box"><i class="fa-solid fa-check-circle"></i> Custom Liquid sections, blocks, and
+                flexible merchant settings</div>
+              <div class="feat-box"><i class="fa-solid fa-check-circle"></i> High-conversion sticky cart drawer, bundle
+                builders & upsells</div>
+              <div class="feat-box"><i class="fa-solid fa-check-circle"></i> Third-party ERP, 3PL warehouse, & CRM
+                integrations</div>
+              <div class="feat-box"><i class="fa-solid fa-check-circle"></i> Internationalization (Shopify Markets,
+                multi-currency, multi-language)</div>
+            </div>
+            <div class="service-tech-footer">
+              <strong>Tech Stack:</strong>
+              <span>Shopify Liquid</span><span>Shopify Plus API</span><span>GraphQL Storefront API</span><span>Theme App
+                Extensions</span>
+            </div>
+          </div>
+
+          <!-- Service 6: WooCommerce Website -->
+          <div class="service-detail-item glass-card" id="service-6">
+            <div class="service-header-row">
+              <div class="service-number">06</div>
+              <div class="service-info-col">
+                <span class="service-pill">Custom Commerce</span>
+                <h2>WooCommerce Website Development</h2>
+              </div>
+              <div class="service-speed-badge">
+                <i class="fa-solid fa-cart-shopping"></i> Unlimited Flexibility
+              </div>
+            </div>
+            <p class="service-description">
+              Unleash the full freedom of open-source eCommerce without the typical performance headaches. I optimize
+              WooCommerce for high-volume catalogs, complex product variations, multi-tier pricing, and subscription
+              commerce.
+            </p>
+            <div class="service-features-grid">
+              <div class="feat-box"><i class="fa-solid fa-check-circle"></i> Custom checkout redesigns with 1-page
+                checkout flows</div>
+              <div class="feat-box"><i class="fa-solid fa-check-circle"></i> Custom payment gateway integrations & local
+                payment methods</div>
+              <div class="feat-box"><i class="fa-solid fa-check-circle"></i> Wholesale / B2B portal setup with custom
+                pricing tiers</div>
+              <div class="feat-box"><i class="fa-solid fa-check-circle"></i> Database query caching and background task
+                scheduling</div>
+            </div>
+            <div class="service-tech-footer">
+              <strong>Tech Stack:</strong>
+              <span>WooCommerce</span><span>WordPress Hook System</span><span>Stripe / PayPal SDKs</span><span>MySQL
+                Optimization</span>
+            </div>
+          </div>
+
+          <!-- Service 7: Multi-Vendor Marketplace (Amazon, Flipkart & Meesho Style) -->
+          <div class="service-detail-item glass-card featured-service-box" id="service-7">
+            <div class="service-header-row">
+              <div class="service-number">07</div>
+              <div class="service-info-col">
+                <span class="service-pill highlight-pill">Flagship Enterprise Solution</span>
+                <h2>eCommerce Solutions Like Amazon, Flipkart & Meesho</h2>
+              </div>
+              <div class="service-speed-badge">
+                <i class="fa-solid fa-crown"></i> Multi-Vendor Enterprise
+              </div>
+            </div>
+            <p class="service-description">
+              Full-scale multi-vendor marketplace platforms engineered to replicate the architectural power of giants
+              like Amazon and Flipkart, infused with Meesho-style zero-investment social reseller models. Includes full
+              vendor back-offices, commission split engines, catalog synchronization, courier API integrations, and
+              WhatsApp social selling.
+            </p>
+            <div class="service-features-grid">
+              <div class="feat-box"><i class="fa-solid fa-check-circle"></i> Dedicated Vendor Portals (inventory upload,
+                pricing, order fulfillment)</div>
+              <div class="feat-box"><i class="fa-solid fa-check-circle"></i> Meesho-Inspired Reseller Module (social
+                catalog share & profit margin add)</div>
+              <div class="feat-box"><i class="fa-solid fa-check-circle"></i> Automated Multi-Vendor Payouts & Commission
+                Engine</div>
+              <div class="feat-box"><i class="fa-solid fa-check-circle"></i> Automated Courier & Logistics API sync
+                (Delhivery, Shiprocket, BlueDart, FedEx)</div>
+              <div class="feat-box"><i class="fa-solid fa-check-circle"></i> Customer reviews, Q&A, real-time OTP login
+                & Cash-on-Delivery (COD) security</div>
+              <div class="feat-box"><i class="fa-solid fa-check-circle"></i> High-concurrency database architecture
+                capable of millions of hits</div>
+            </div>
+            <div class="service-tech-footer">
+              <strong>Tech Stack:</strong>
+              <span>Custom Full-Stack / Node.js</span><span>PostgreSQL / Redis</span><span>Multi-Tenant
+                Architecture</span><span>Logistics APIs</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ========================================== -->
+        <!-- Interactive Project Cost & Timeline Estimator -->
+        <!-- ========================================== -->
+        <div class="estimator-section glass-card" id="project-estimator">
+          <div class="estimator-header text-center">
+            <span class="badge-tag">INTERACTIVE TOOL</span>
+            <h2>Estimate Your Project Cost & Timeline</h2>
+            <p>Select your required services and features to get an immediate cost ballpark and timeline. One-click
+              export to your inquiry form.</p>
+          </div>
+
+          <div class="estimator-grid">
+            <div class="estimator-inputs">
+
+              <!-- Service Selection -->
+              <div class="form-group-custom">
+                <label class="group-label">1. Primary Service Needed:</label>
+                <div class="service-selector-chips" id="est-service-chips">
+                  <button type="button" class="chip-btn active" data-cost="1200" data-days="14"
+                    data-name="Custom Website">Custom Website</button>
+                  <button type="button" class="chip-btn" data-cost="900" data-days="10"
+                    data-name="WordPress Website">WordPress Website</button>
+                  <button type="button" class="chip-btn" data-cost="2800" data-days="30"
+                    data-name="Custom Web App / SaaS">Custom Web App</button>
+                  <button type="button" class="chip-btn" data-cost="1100" data-days="7"
+                    data-name="Meta Ads Campaign">Meta Ads Scaling</button>
+                  <button type="button" class="chip-btn" data-cost="1600" data-days="18"
+                    data-name="Shopify Store">Shopify Store</button>
+                  <button type="button" class="chip-btn" data-cost="1400" data-days="16"
+                    data-name="WooCommerce Store">WooCommerce</button>
+                  <button type="button" class="chip-btn" data-cost="4500" data-days="45"
+                    data-name="Amazon/Flipkart/Meesho Marketplace">Amazon/Flipkart/Meesho Marketplace</button>
+                </div>
+              </div>
+
+              <!-- Scope Selection -->
+              <div class="form-group-custom">
+                <label class="group-label">2. Project Scope & Tier:</label>
+                <div class="tier-options" id="est-tier-options">
+                  <label class="tier-card active">
+                    <input type="radio" name="project-tier" value="mvp" data-multiplier="1.0" checked>
+                    <div class="tier-content">
+                      <span class="tier-title">Standard / MVP</span>
+                      <span class="tier-desc">Essential core features & clean launch</span>
+                    </div>
+                  </label>
+                  <label class="tier-card">
+                    <input type="radio" name="project-tier" value="pro" data-multiplier="1.6">
+                    <div class="tier-content">
+                      <span class="tier-title">Professional</span>
+                      <span class="tier-desc">Advanced features & conversion optimization</span>
+                    </div>
+                  </label>
+                  <label class="tier-card">
+                    <input type="radio" name="project-tier" value="enterprise" data-multiplier="2.5">
+                    <div class="tier-content">
+                      <span class="tier-title">Enterprise Scale</span>
+                      <span class="tier-desc">High concurrency, custom microservices & SLA</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Add-ons Selection -->
+              <div class="form-group-custom">
+                <label class="group-label">3. High-Value Add-Ons:</label>
+                <div class="addon-checkboxes" id="est-addons">
+                  <label class="addon-item">
+                    <input type="checkbox" data-cost="350" data-days="3" value="Meta Conversions API (CAPI)">
+                    <span>Meta Conversions API (CAPI) & Pixel Setup (+ $350)</span>
+                  </label>
+                  <label class="addon-item">
+                    <input type="checkbox" data-cost="500" data-days="4" value="Payment Gateways & Split Payouts">
+                    <span>Multi-Currency & Split Payout Engine (+ $500)</span>
+                  </label>
+                  <label class="addon-item">
+                    <input type="checkbox" data-cost="450" data-days="3" value="SEO & Performance Optimization">
+                    <span>Ultra-Speed & Technical SEO Suite (+ $450)</span>
+                  </label>
+                  <label class="addon-item">
+                    <input type="checkbox" data-cost="800" data-days="7" value="Meesho Social Reseller Module">
+                    <span>Meesho-Style Social Sharing & Margin System (+ $800)</span>
+                  </label>
+                  <label class="addon-item">
+                    <input type="checkbox" data-cost="600" data-days="5" value="Courier Logistics Sync">
+                    <span>Automated Courier Tracking & API Sync (+ $600)</span>
+                  </label>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Estimator Result Card -->
+            <div class="estimator-result-col">
+              <div class="result-sticky-card glass-card">
+                <div class="result-header">
+                  <span class="pulse-indicator"></span> Live Calculation
+                </div>
+                <div class="price-display">
+                  <span class="currency">$</span>
+                  <span class="amount" id="est-total-cost">1,200</span>
+                  <span class="period">USD approx</span>
+                </div>
+                <div class="timeline-display">
+                  <i class="fa-solid fa-stopwatch"></i> Estimated Turnaround: <strong id="est-total-days">14 Business
+                    Days</strong>
+                </div>
+
+                <div class="selected-summary">
+                  <h5>Configuration Breakdown:</h5>
+                  <div class="summary-line"><span>Primary Service:</span> <strong id="summary-service">Custom
+                      Website</strong></div>
+                  <div class="summary-line"><span>Tier Level:</span> <strong id="summary-tier">Standard / MVP</strong>
+                  </div>
+                  <div class="summary-line"><span>Add-ons Count:</span> <strong id="summary-addons">0 Selected</strong>
+                  </div>
+                </div>
+
+                <div class="estimator-actions">
+                  <button class="btn btn-primary btn-block" id="apply-to-contact-btn">
+                    <span>Pre-fill Contact Form</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                  <span class="guarantee-note"><i class="fa-solid fa-shield-check"></i> 100% Fixed Quote & On-Time
+                    Guarantee</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 5. CONTACT PAGE VIEW                       -->
+    <!-- ========================================== -->
+    <section class="page-view" id="view-contact" data-route="contact">
+      <div class="contact-hero container">
+        <div class="section-header text-center">
+          <div class="badge-tag">LET'S CONNECT</div>
+          <h1 class="section-title">Initiate Your Project Discussion</h1>
+          <p class="section-desc">Have a technical project, marketplace, or advertising campaign in mind? Reach out
+            directly and let’s discuss deliverables, milestones, and technical roadmaps.</p>
+        </div>
+
+        <div class="contact-layout-grid">
+
+          <!-- Contact Info & Direct Channels -->
+          <div class="contact-info-column">
+
+            <div class="contact-card-highlight glass-card">
+              <div class="status-badge-live">
+                <span class="live-dot-green"></span> Available for Q4/Q1 Contracts
+              </div>
+              <h3>Direct Contacts</h3>
+              <p>Skip the intermediaries. Talk directly to the architect who will design and build your system with 7
+                years of expertise.</p>
+
+              <div class="direct-channels-list">
+                <a href="mailto:contact@prawezalam.dev" class="channel-item">
+                  <div class="channel-icon"><i class="fa-solid fa-envelope"></i></div>
+                  <div class="channel-content">
+                    <span class="channel-label">Email Directly</span>
+                    <span class="channel-val">contact@prawezalam.dev</span>
+                  </div>
+                </a>
+
+                <a href="https://wa.me/919876543210" target="_blank" rel="noopener" class="channel-item">
+                  <div class="channel-icon whatsapp-bg"><i class="fa-brands fa-whatsapp"></i></div>
+                  <div class="channel-content">
+                    <span class="channel-label">WhatsApp Quick Chat</span>
+                    <span class="channel-val">+91 98765 43210 (Instant Reply)</span>
+                  </div>
+                </a>
+
+                <a href="https://linkedin.com" target="_blank" rel="noopener" class="channel-item">
+                  <div class="channel-icon"><i class="fa-brands fa-linkedin"></i></div>
+                  <div class="channel-content">
+                    <span class="channel-label">LinkedIn Profile</span>
+                    <span class="channel-val">prawez-alam-fullstack</span>
+                  </div>
+                </a>
+
+                <div class="channel-item non-link">
+                  <div class="channel-icon"><i class="fa-solid fa-location-dot"></i></div>
+                  <div class="channel-content">
+                    <span class="channel-label">Location & Working Model</span>
+                    <span class="channel-val">Global Remote / Hybrid Availability</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Strategy Call Scheduler Mockup -->
+            <div class="calendar-booking-card glass-card">
+              <div class="booking-header">
+                <i class="fa-solid fa-calendar-check"></i>
+                <div>
+                  <h4>Book a 15-Minute Technical Call</h4>
+                  <span>No obligation, pure strategy</span>
+                </div>
+              </div>
+              <p class="booking-text">Pick a convenient timeslot for a Zoom or Google Meet walkthrough of your
+                requirements.</p>
+              <div class="time-slots-pills">
+                <button class="slot-pill active">Today 4:00 PM</button>
+                <button class="slot-pill">Tomorrow 11:00 AM</button>
+                <button class="slot-pill">Tomorrow 3:30 PM</button>
+              </div>
+              <button class="btn btn-secondary btn-block" id="booking-btn-action">
+                <span>Reserve Strategy Call</span>
+                <i class="fa-solid fa-video"></i>
+              </button>
+            </div>
+
+          </div>
+
+          <!-- Interactive Contact Form -->
+          <div class="contact-form-column">
+            <div class="form-container glass-card">
+              <div class="form-top-bar">
+                <h3>Send a Direct Project Inquiry</h3>
+                <span class="reply-badge"><i class="fa-solid fa-bolt"></i> Replies within 4 hours</span>
+              </div>
+
+              <form id="project-inquiry-form" novalidate>
+                <div class="form-row-2">
+                  <div class="input-group">
+                    <label for="contact-name">Your Full Name <span class="req">*</span></label>
+                    <div class="input-field-wrap">
+                      <i class="fa-solid fa-user"></i>
+                      <input type="text" id="contact-name" name="name" placeholder="e.g. Sarah Jenkins" required>
+                    </div>
+                  </div>
+                  <div class="input-group">
+                    <label for="contact-email">Email Address <span class="req">*</span></label>
+                    <div class="input-field-wrap">
+                      <i class="fa-solid fa-at"></i>
+                      <input type="email" id="contact-email" name="email" placeholder="sarah@company.com" required>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-row-2">
+                  <div class="input-group">
+                    <label for="contact-service">Required Service <span class="req">*</span></label>
+                    <div class="input-field-wrap select-wrap">
+                      <i class="fa-solid fa-list-check"></i>
+                      <select id="contact-service" name="service" required>
+                        <option value="">Select a Service...</option>
+                        <option value="Custom website development">1. Custom website development</option>
+                        <option value="WordPress website">2. WordPress website</option>
+                        <option value="Custom web application / SaaS">3. Custom web application / SaaS</option>
+                        <option value="Meta ads">4. Meta ads (Facebook & Instagram)</option>
+                        <option value="Shopify website">5. Shopify website</option>
+                        <option value="WooCommerce website">6. WooCommerce website</option>
+                        <option value="eCommerce solution like Amazon, Flipkart and Meesho">7. eCommerce solution like
+                          Amazon, Flipkart & Meesho</option>
+                        <option value="Multiple / End-to-End Solutions">Multiple / Full End-to-End</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="input-group">
+                    <label for="contact-budget">Estimated Budget Range</label>
+                    <div class="input-field-wrap select-wrap">
+                      <i class="fa-solid fa-dollar-sign"></i>
+                      <select id="contact-budget" name="budget">
+                        <option value="$1,000 - $3,000">$1,000 - $3,000</option>
+                        <option value="$3,000 - $7,000" selected>$3,000 - $7,000</option>
+                        <option value="$7,000 - $15,000">$7,000 - $15,000</option>
+                        <option value="$15,000+">$15,000+ (Enterprise)</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="input-group">
+                  <label for="contact-message">Project Overview & Specifics <span class="req">*</span></label>
+                  <div class="input-field-wrap textarea-wrap">
+                    <i class="fa-solid fa-message"></i>
+                    <textarea id="contact-message" name="message" rows="5"
+                      placeholder="Tell me about your goals, current bottlenecks, desired timeline, or reference links (e.g., like Amazon or Meesho)..."
+                      required></textarea>
+                  </div>
+                </div>
+
+                <!-- Simulated File Attachment -->
+                <div class="attachment-dropzone" id="attachment-dropzone">
+                  <input type="file" id="contact-file" class="hidden-file-input">
+                  <i class="fa-solid fa-cloud-arrow-up"></i>
+                  <span class="dropzone-text">Attach Project Specs or RFP (Optional, Max 25MB)</span>
+                  <span class="file-name-display" id="file-name-display"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block submit-btn" id="contact-submit-btn">
+                  <span class="btn-text">Transmit Project Inquiry</span>
+                  <i class="fa-solid fa-paper-plane"></i>
+                  <span class="spinner-loader" style="display: none;"><i
+                      class="fa-solid fa-circle-notch fa-spin"></i></span>
+                </button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Frequently Asked Questions Accordion -->
+        <div class="faq-section">
+          <div class="section-header text-center">
+            <div class="badge-tag">CLIENT CLARITY</div>
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-desc">Key details regarding working models, milestones, and technical guarantees.</p>
+          </div>
+
+          <div class="faq-accordion-wrapper">
+
+            <div class="faq-item glass-card active">
+              <div class="faq-question">
+                <h3>How do your multi-vendor Amazon/Flipkart & Meesho solutions work?</h3>
+                <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+              </div>
+              <div class="faq-answer">
+                <p>I build custom marketplace engines where sellers have their own autonomous dashboard to upload
+                  products, monitor inventory, and fulfill orders. The platform automatically calculates commission
+                  splits and payouts. For the Meesho model, independent resellers can generate tracked catalog links
+                  with their own added profit margin to share on WhatsApp and Instagram, complete with Cash-on-Delivery
+                  (COD) verification algorithms.</p>
+              </div>
+            </div>
+
+            <div class="faq-item glass-card">
+              <div class="faq-question">
+                <h3>What guarantees do you offer regarding the 7 years of experience?</h3>
+                <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+              </div>
+              <div class="faq-answer">
+                <p>Every contract includes clean, thoroughly commented code, full Git version history, NDA
+                  confidentiality, milestone-based payments (you only release funds upon approved deliverables), and 30
+                  to 60 days of complimentary post-launch support and bug fixes.</p>
+              </div>
+            </div>
+
+            <div class="faq-item glass-card">
+              <div class="faq-question">
+                <h3>Can you handle both web development AND Meta Ads together?</h3>
+                <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+              </div>
+              <div class="faq-answer">
+                <p>Yes, this is my highest-leverage advantage. Most agencies separate developers from marketers, leading
+                  to tracking issues and slow landing page tweaks. As a full-stack engineer and performance marketer, I
+                  configure server-side Meta Conversions API (CAPI), optimize checkout speed to 99+ PageSpeed scores,
+                  and build dynamic funnels that maximize ad ROAS immediately.</p>
+              </div>
+            </div>
+
+            <div class="faq-item glass-card">
+              <div class="faq-question">
+                <h3>Do you build with Shopify Liquid or Headless Next.js?</h3>
+                <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+              </div>
+              <div class="faq-answer">
+                <p>Both! Depending on your store’s budget and technical needs, I develop either natively inside Shopify
+                  2.0 with custom Liquid sections (easier for non-technical staff to manage) or build a high-performance
+                  headless architecture with Next.js and Shopify’s Storefront GraphQL API for blazing-fast page loads.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================== -->
+  <!-- MODALS & POPUPS                            -->
+  <!-- ========================================== -->
+
+  <!-- Project Case Study Modal -->
+  <div class="modal-backdrop" id="project-modal" aria-hidden="true">
+    <div class="modal-dialog glass-card">
+      <button class="modal-close" id="modal-close-btn" aria-label="Close Modal">&times;</button>
+      <div class="modal-body" id="project-modal-content">
+        <!-- Content injected dynamically via script.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Resume / Credentials Modal -->
+  <div class="modal-backdrop" id="resume-modal" aria-hidden="true">
+    <div class="modal-dialog glass-card resume-dialog">
+      <button class="modal-close" id="resume-close-btn" aria-label="Close Resume">&times;</button>
+      <div class="resume-sheet">
+        <div class="resume-header">
+          <div>
+            <h2>Prawez Alam</h2>
+            <p class="resume-role">Senior Full-Stack Architect & Growth Engineer • 7+ Years Experience</p>
+          </div>
+          <button class="btn btn-primary btn-sm" id="download-resume-btn">
+            <i class="fa-solid fa-download"></i> Print / Save PDF
+          </button>
+        </div>
+        <hr class="resume-divider">
+        <div class="resume-body">
+          <div class="resume-section">
+            <h4>Executive Summary</h4>
+            <p>Full-Stack Engineer with 7+ years of experience architecting resilient web platforms, enterprise
+              multi-vendor marketplaces (Amazon/Flipkart/Meesho models), high-conversion Shopify & WooCommerce
+              ecosystems, and high-budget Meta Ads funnels ($3.2M+ spend managed). Proven track record of boosting
+              conversions by 200%+ and achieving 4.8x average ROAS.</p>
+          </div>
+          <div class="resume-section">
+            <h4>Core Expertise</h4>
+            <div class="resume-chips">
+              <span>Full-Stack Architecture</span><span>Amazon/Flipkart Style Marketplaces</span><span>Meesho Reseller
+                Engine</span><span>Shopify Plus & Liquid</span><span>WooCommerce Optimization</span><span>Meta Ads &
+                CAPI</span><span>React & Next.js</span><span>Node & PostgreSQL</span><span>AWS & Docker</span>
+            </div>
+          </div>
+          <div class="resume-section">
+            <h4>Professional Timeline</h4>
+            <div class="resume-job">
+              <strong>Lead Architect & eCommerce Consultant</strong> (2022 - Present)
+              <p>Orchestrated digital platforms for international eCommerce brands; boosted average client GMV by $15M+.
+              </p>
+            </div>
+            <div class="resume-job">
+              <strong>Senior Full-Stack Developer</strong> (2020 - 2022)
+              <p>Built custom WordPress/WooCommerce solutions, high-speed custom CMSs, and headless web apps.</p>
+            </div>
+            <div class="resume-job">
+              <strong>Full-Stack Web Engineer</strong> (2019 - 2020)
+              <p>Developed custom client websites, integrated Stripe/PayPal payment systems, and handled technical SEO.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Command Palette Modal (Ctrl + K) -->
+  <div class="cmd-palette-backdrop" id="cmd-palette" aria-hidden="true">
+    <div class="cmd-palette-box glass-card">
+      <div class="cmd-input-wrap">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="cmd-input"
+          placeholder="Type a command or jump to page (Home, Services, Estimator, Contact)...">
+        <span class="cmd-esc-hint">ESC to close</span>
+      </div>
+      <div class="cmd-results-list" id="cmd-results">
+        <!-- Injected via script.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="back-to-top" title="Back to Top" aria-label="Back to Top">
+    <svg class="progress-ring" width="46" height="46">
+      <circle class="progress-ring__circle" stroke="var(--primary-color)" stroke-width="3" fill="transparent" r="20"
+        cx="23" cy="23" />
+    </svg>
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-top container">
+      <div class="footer-brand-col">
+        <div class="logo-text">
+          <span class="logo-name">PRAWEZ<span class="highlight">ALAM</span></span>
+          <span class="logo-tag">7+ YRS ARCHITECT</span>
+        </div>
+        <p class="footer-bio">
+          Designing and coding high-velocity web platforms, enterprise eCommerce marketplaces, and scale-driven Meta Ads
+          campaigns. Built with obsession for speed and revenue.
+        </p>
+        <div class="footer-socials">
+          <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub"><i
+              class="fa-brands fa-github"></i></a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i
+              class="fa-brands fa-linkedin"></i></a>
+          <a href="https://wa.me/" target="_blank" rel="noopener" aria-label="WhatsApp"><i
+              class="fa-brands fa-whatsapp"></i></a>
+          <a href="mailto:contact@prawezalam.dev" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#home" class="nav-trigger" data-page="home">Home Page</a></li>
+          <li><a href="#about" class="nav-trigger" data-page="about">About (7 Yrs Exp)</a></li>
+          <li><a href="#projects" class="nav-trigger" data-page="projects">Featured Projects</a></li>
+          <li><a href="#services" class="nav-trigger" data-page="services">All 7 Services</a></li>
+          <li><a href="#contact" class="nav-trigger" data-page="contact">Contact & Inquiry</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>Flagship Services</h4>
+        <ul>
+          <li><a href="#services" class="nav-trigger" data-page="services">Custom Website Development</a></li>
+          <li><a href="#services" class="nav-trigger" data-page="services">Amazon / Flipkart Marketplaces</a></li>
+          <li><a href="#services" class="nav-trigger" data-page="services">Meesho Social Reseller Solutions</a></li>
+          <li><a href="#services" class="nav-trigger" data-page="services">Shopify & WooCommerce</a></li>
+          <li><a href="#services" class="nav-trigger" data-page="services">Meta Ads & CAPI Scaling</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>Direct Contact</h4>
+        <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i> contact@prawezalam.dev</div>
+        <div class="footer-contact-item"><i class="fa-brands fa-whatsapp"></i> +91 98765 43210</div>
+        <div class="footer-contact-item"><i class="fa-solid fa-clock"></i> Mon - Sat, 9:00 AM - 8:00 PM</div>
+        <div class="footer-contact-item"><i class="fa-solid fa-shield-check"></i> 100% NDA Protected</div>
+      </div>
+    </div>
+
+    <div class="footer-bottom container">
+      <div class="copyright">
+        © 2026 Prawez Alam. All Rights Reserved. Crafted with Vanilla CSS & Native JS.
+      </div>
+      <div class="footer-credits">
+        <span>7 Years of Full-Stack Excellence</span>
+        <span class="sep">•</span>
+        <a href="#privacy"
+          onclick="alert('Privacy Policy: All client data and inquiries are strictly confidential and encrypted under NDA.'); return false;">Privacy
+          & NDA</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+
+</html>
